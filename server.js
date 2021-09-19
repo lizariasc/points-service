@@ -16,7 +16,7 @@ const express = require("express");
  ];
 
   // Register routes
- var pointRouter = require('./api/routes/point');
+ var pointRouter = require('./api/routes/point-routes');
  app.use('/', pointRouter);
 
   app.listen(port);
