@@ -22,14 +22,15 @@ When a user spends points, they don't know or care which payer the points come f
 
 It provides routes that:
 
-- Add transactions for a specific payer and date. (GET ROUTE)
-![GET](GET.png)
-
-- Spend points using the rules above and return a list of ​{ "payer": <string>, "points": <integer> }​ for each call.
+- Add transactions for a specific payer and date. (`POST ROUTE: http://localhost:3000/add`)
 ![ADD](ADD.png)
 
-- Return all payer point balances.
+- Spend points using the rules above and return a list of ​{ "payer": <string>, "points": <integer> }​ for each call. (`POST ROUTE: http://localhost:3000/spend`)
 ![SPEND](SPEND.png)
+
+- Return all payer point balances. (`GET ROUTE: http://localhost:3000/`)
+![GET](GET.png)
+
 
 ## Installation 
 Clone the repo, run `npm i` to install the dependencies. 
