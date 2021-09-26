@@ -1,8 +1,7 @@
 # points-service
 
 ## Description
-A web service that accepts HTTP requests and updates points in user's accounts. Each transaction record contains: ​payer​ (string), ​points​ (integer), ​timestamp​ (date). 
-
+A web service that allows users spend points and add transactions. Each transaction record contains: ​payer​ (string), ​points​ (integer), ​timestamp​ (date). 
 
   ## Table of Contents
 
