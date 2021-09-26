@@ -1,16 +1,25 @@
-const router = require('express').Router();
+var express = require("express");
+var router = express.Router();
 
-const {
-    pointController
-} = require("../controllers/point-controller");
+var pointController = require("../controllers/point-controller");
 
- // Get route
- router.route('/').get(pointController.getPoints);
+/// POINT ROUTES ///
 
- // POST route to add points
- router.route('/').post(pointController.validate('addPoints'), pointController.addPoints);
+// Get points
+router.get("/", pointController.getPoints);
 
- // POST route to spend points
- router.route('/spend').post(pointController.spendPoints);
+// Add points
+router.post(
+    "/point",
+    pointController.validate("addPoints"),
+    pointController.addPoints
+);
 
- module.exports = router;
+// Spend points
+router.post(
+    "/point/spend",
+    pointController.validate("spendPoints"),
+    pointController.spendPoints
+);
+
+module.exports = router;
